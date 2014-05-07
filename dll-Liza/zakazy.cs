@@ -78,6 +78,9 @@ namespace dll_Liza
             f.label4.Text = dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[klientfioDataGridViewTextBoxColumn.DisplayIndex].Value.ToString();
             f.formirovaniezakaza1BindingSource.Filter = "ID_zakaza='" + f.label2.Text + "'";
             f.ShowDialog();
+
+            this.zakaz1TableAdapter.Fill(this.kafeDataSet.Zakaz1);
+            zakaz1TableAdapter.Update(this.kafeDataSet.Zakaz1);
         }
     }
 }

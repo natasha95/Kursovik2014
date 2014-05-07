@@ -11,5 +11,3 @@ D:\Курсовая работа 2014\программа\RabotaKafe\RabotaKafe\b
 D:\Курсовая работа 2014\программа\RabotaKafe\RabotaKafe\bin\Debug\dll-Natasha.pdb
 D:\Курсовая работа 2014\программа\RabotaKafe\RabotaKafe\obj\x86\Debug\RabotaKafe.exe
 D:\Курсовая работа 2014\программа\RabotaKafe\RabotaKafe\obj\x86\Debug\RabotaKafe.pdb
-D:\Курсовая работа 2014\программа\программа\RabotaKafe\RabotaKafe\obj\x86\Debug\RabotaKafe.exe
-D:\Курсовая работа 2014\программа\программа\RabotaKafe\RabotaKafe\obj\x86\Debug\RabotaKafe.pdb

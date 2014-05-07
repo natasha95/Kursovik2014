@@ -38,5 +38,17 @@ namespace dll_Liza
                 formirovanie_zakaza1TableAdapter.Update(this.kafeDataSet.Formirovanie_zakaza1);
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            // пометка на удаление:
+            formirovaniezakaza1BindingSource.RemoveCurrent();
+
+            // сохранение изменений:
+            formirovaniezakaza1BindingSource.EndEdit();
+
+            // выгрузка в DataGridView обновленных данных:
+            formirovanie_zakaza1TableAdapter.Update(this.kafeDataSet.Formirovanie_zakaza1); 
+        }
     }
 }

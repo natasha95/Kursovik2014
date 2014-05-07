@@ -33,16 +33,25 @@
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.kafeDataSet = new dll_Liza.kafeDataSet();
+            this.bludo1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.bludo1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bludo1TableAdapter = new dll_Liza.kafeDataSetTableAdapters.Bludo1TableAdapter();
             this.formirovaniezakazaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.formirovanie_zakazaTableAdapter = new dll_Liza.kafeDataSetTableAdapters.Formirovanie_zakazaTableAdapter();
+            this.produktBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.produktTableAdapter = new dll_Liza.kafeDataSetTableAdapters.ProduktTableAdapter();
+            this.sostavbludaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sostav_bludaTableAdapter = new dll_Liza.kafeDataSetTableAdapters.Sostav_bludaTableAdapter();
+            this.zakazBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.zakazTableAdapter = new dll_Liza.kafeDataSetTableAdapters.ZakazTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.kafeDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bludo1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.formirovaniezakazaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.produktBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sostavbludaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zakazBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -80,6 +89,11 @@
             this.kafeDataSet.DataSetName = "kafeDataSet";
             this.kafeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // bludo1BindingSource
+            // 
+            this.bludo1BindingSource.DataMember = "Bludo1";
+            this.bludo1BindingSource.DataSource = this.kafeDataSet;
+            // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(68, 40);
@@ -108,11 +122,6 @@
             this.button2.Text = "Отмена";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // bludo1BindingSource
-            // 
-            this.bludo1BindingSource.DataMember = "Bludo1";
-            this.bludo1BindingSource.DataSource = this.kafeDataSet;
-            // 
             // bludo1TableAdapter
             // 
             this.bludo1TableAdapter.ClearBeforeFill = true;
@@ -125,6 +134,33 @@
             // formirovanie_zakazaTableAdapter
             // 
             this.formirovanie_zakazaTableAdapter.ClearBeforeFill = true;
+            // 
+            // produktBindingSource
+            // 
+            this.produktBindingSource.DataMember = "Produkt";
+            this.produktBindingSource.DataSource = this.kafeDataSet;
+            // 
+            // produktTableAdapter
+            // 
+            this.produktTableAdapter.ClearBeforeFill = true;
+            // 
+            // sostavbludaBindingSource
+            // 
+            this.sostavbludaBindingSource.DataMember = "Sostav_bluda";
+            this.sostavbludaBindingSource.DataSource = this.kafeDataSet;
+            // 
+            // sostav_bludaTableAdapter
+            // 
+            this.sostav_bludaTableAdapter.ClearBeforeFill = true;
+            // 
+            // zakazBindingSource
+            // 
+            this.zakazBindingSource.DataMember = "Zakaz";
+            this.zakazBindingSource.DataSource = this.kafeDataSet;
+            // 
+            // zakazTableAdapter
+            // 
+            this.zakazTableAdapter.ClearBeforeFill = true;
             // 
             // bludo_v_zakaz
             // 
@@ -149,6 +185,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.kafeDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bludo1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.formirovaniezakazaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.produktBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sostavbludaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zakazBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -167,5 +206,11 @@
         public kafeDataSetTableAdapters.Bludo1TableAdapter bludo1TableAdapter;
         public System.Windows.Forms.BindingSource formirovaniezakazaBindingSource;
         public kafeDataSetTableAdapters.Formirovanie_zakazaTableAdapter formirovanie_zakazaTableAdapter;
+        public System.Windows.Forms.BindingSource produktBindingSource;
+        public kafeDataSetTableAdapters.ProduktTableAdapter produktTableAdapter;
+        public System.Windows.Forms.BindingSource sostavbludaBindingSource;
+        public kafeDataSetTableAdapters.Sostav_bludaTableAdapter sostav_bludaTableAdapter;
+        public System.Windows.Forms.BindingSource zakazBindingSource;
+        public kafeDataSetTableAdapters.ZakazTableAdapter zakazTableAdapter;
     }
 }
