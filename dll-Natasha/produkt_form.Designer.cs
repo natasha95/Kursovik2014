@@ -135,6 +135,7 @@
             this.button3.TabIndex = 3;
             this.button3.Text = "Удалить продукт";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Visible = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // produktTableAdapter
@@ -145,6 +146,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Thistle;
             this.ClientSize = new System.Drawing.Size(644, 260);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);

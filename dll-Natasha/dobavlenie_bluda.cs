@@ -24,13 +24,20 @@ namespace dll_Natasha
 
         private void dobavlenie_bluda_FormClosing(object sender, FormClosingEventArgs e)
         {
-            // если пользователь нажал на первую кнопку:
-            if (DialogResult == System.Windows.Forms.DialogResult.OK)
-                // сохранить изменения:
-                bludoBindingSource.EndEdit();
-            else
-                // не сохранять изменения:
-                bludoBindingSource.CancelEdit();
+            try
+            {
+                // если пользователь нажал на первую кнопку:
+                if (DialogResult == System.Windows.Forms.DialogResult.OK)
+                    // сохранить изменения:
+                    bludoBindingSource.EndEdit();
+                else
+                    // не сохранять изменения:
+                    bludoBindingSource.CancelEdit();
+            }
+            catch (Exception e1)
+            {
+                System.Windows.Forms.MessageBox.Show(e1.Message);
+            }
 
         }
 

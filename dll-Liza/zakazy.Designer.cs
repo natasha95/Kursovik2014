@@ -42,6 +42,10 @@
             this.button5 = new System.Windows.Forms.Button();
             this.klientBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.klientTableAdapter = new dll_Liza.kafeDataSetTableAdapters.KlientTableAdapter();
+            this.formirovaniezakaza1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.formirovanie_zakaza1TableAdapter = new dll_Liza.kafeDataSetTableAdapters.Formirovanie_zakaza1TableAdapter();
+            this.bludo1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bludo1TableAdapter = new dll_Liza.kafeDataSetTableAdapters.Bludo1TableAdapter();
             this.summazakazaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.klientfioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,6 +53,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.zakaz1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kafeDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.klientBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.formirovaniezakaza1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bludo1BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -159,6 +165,24 @@
             // 
             this.klientTableAdapter.ClearBeforeFill = true;
             // 
+            // formirovaniezakaza1BindingSource
+            // 
+            this.formirovaniezakaza1BindingSource.DataMember = "Formirovanie_zakaza1";
+            this.formirovaniezakaza1BindingSource.DataSource = this.kafeDataSet;
+            // 
+            // formirovanie_zakaza1TableAdapter
+            // 
+            this.formirovanie_zakaza1TableAdapter.ClearBeforeFill = true;
+            // 
+            // bludo1BindingSource
+            // 
+            this.bludo1BindingSource.DataMember = "Bludo1";
+            this.bludo1BindingSource.DataSource = this.kafeDataSet;
+            // 
+            // bludo1TableAdapter
+            // 
+            this.bludo1TableAdapter.ClearBeforeFill = true;
+            // 
             // summazakazaDataGridViewTextBoxColumn
             // 
             this.summazakazaDataGridViewTextBoxColumn.DataPropertyName = "Summa_zakaza";
@@ -185,7 +209,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(722, 361);
+            this.ClientSize = new System.Drawing.Size(702, 361);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -203,6 +227,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.zakaz1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kafeDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.klientBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.formirovaniezakaza1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bludo1BindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -220,10 +246,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn Status;
         private System.Windows.Forms.Button button5;
+        public System.Windows.Forms.BindingSource klientBindingSource;
+        public kafeDataSetTableAdapters.KlientTableAdapter klientTableAdapter;
+        public System.Windows.Forms.BindingSource formirovaniezakaza1BindingSource;
+        public kafeDataSetTableAdapters.Formirovanie_zakaza1TableAdapter formirovanie_zakaza1TableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn klientfioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn summazakazaDataGridViewTextBoxColumn;
-        public System.Windows.Forms.BindingSource klientBindingSource;
-        public kafeDataSetTableAdapters.KlientTableAdapter klientTableAdapter;
+        public System.Windows.Forms.BindingSource bludo1BindingSource;
+        public kafeDataSetTableAdapters.Bludo1TableAdapter bludo1TableAdapter;
     }
 }

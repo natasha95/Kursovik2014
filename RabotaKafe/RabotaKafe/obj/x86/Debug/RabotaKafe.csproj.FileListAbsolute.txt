@@ -10,3 +10,17 @@ D:\Курсовая работа 2014\программа\RabotaKafe\RabotaKafe\o
 D:\Курсовая работа 2014\программа\RabotaKafe\RabotaKafe\obj\x86\Debug\RabotaKafe.csproj.GenerateResource.Cache
 D:\Курсовая работа 2014\программа\RabotaKafe\RabotaKafe\obj\x86\Debug\RabotaKafe.exe
 D:\Курсовая работа 2014\программа\RabotaKafe\RabotaKafe\obj\x86\Debug\RabotaKafe.pdb
+D:\Курсовая работа 2014\программа\RabotaKafe\RabotaKafe\bin\Debug\itextsharp.dll
+C:\Users\user\Desktop\Курсовая работа 2014\программа\RabotaKafe\RabotaKafe\obj\x86\Debug\RabotaKafe.exe
+C:\Users\user\Desktop\Курсовая работа 2014\программа\RabotaKafe\RabotaKafe\obj\x86\Debug\RabotaKafe.pdb
+C:\Users\user\Desktop\Курсовая работа 2014\программа\RabotaKafe\RabotaKafe\bin\Debug\RabotaKafe.exe
+C:\Users\user\Desktop\Курсовая работа 2014\программа\RabotaKafe\RabotaKafe\bin\Debug\RabotaKafe.pdb
+C:\Users\user\Desktop\Курсовая работа 2014\программа\RabotaKafe\RabotaKafe\bin\Debug\dll-Liza.dll
+C:\Users\user\Desktop\Курсовая работа 2014\программа\RabotaKafe\RabotaKafe\bin\Debug\dll-Natasha.dll
+C:\Users\user\Desktop\Курсовая работа 2014\программа\RabotaKafe\RabotaKafe\bin\Debug\itextsharp.dll
+C:\Users\user\Desktop\Курсовая работа 2014\программа\RabotaKafe\RabotaKafe\bin\Debug\dll-Liza.pdb
+C:\Users\user\Desktop\Курсовая работа 2014\программа\RabotaKafe\RabotaKafe\bin\Debug\dll-Natasha.pdb
+C:\Users\user\Desktop\Курсовая работа 2014\программа\RabotaKafe\RabotaKafe\obj\x86\Debug\RabotaKafe.csprojResolveAssemblyReference.cache
+C:\Users\user\Desktop\Курсовая работа 2014\программа\RabotaKafe\RabotaKafe\obj\x86\Debug\RabotaKafe.Form1.resources
+C:\Users\user\Desktop\Курсовая работа 2014\программа\RabotaKafe\RabotaKafe\obj\x86\Debug\RabotaKafe.Properties.Resources.resources
+C:\Users\user\Desktop\Курсовая работа 2014\программа\RabotaKafe\RabotaKafe\obj\x86\Debug\RabotaKafe.csproj.GenerateResource.Cache

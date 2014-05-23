@@ -24,14 +24,21 @@ namespace dll_Natasha
 
         private void button3_Click(object sender, EventArgs e)
         {
-            // пометка на удаление:
-            produktBindingSource.RemoveCurrent();
+            try
+            {
+                // пометка на удаление:
+                produktBindingSource.RemoveCurrent();
 
-            // сохранение изменений:
-            produktBindingSource.EndEdit();
+                // сохранение изменений:
+                produktBindingSource.EndEdit();
 
-            // выгрузка в DataGridView обновленных данных:
-            produktTableAdapter.Update(this.kafeDataSet.Produkt); 
+                // выгрузка в DataGridView обновленных данных:
+                produktTableAdapter.Update(this.kafeDataSet.Produkt);
+            }
+            catch (Exception e1)
+            {
+                System.Windows.Forms.MessageBox.Show(e1.Message);
+            }
 
         }
 
@@ -42,39 +49,53 @@ namespace dll_Natasha
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // создаем объект второй формы
-            dobavlenie_produkta f = new dobavlenie_produkta();
+            try
+            {
+                // создаем объект второй формы
+                dobavlenie_produkta f = new dobavlenie_produkta();
 
-            // добавляем новую запись в таблицу
-            produktBindingSource.AddNew();
+                // добавляем новую запись в таблицу
+                produktBindingSource.AddNew();
 
-            // синхронизируем компоненты bindingSource обоих форм
-            f.produktBindingSource.DataSource = produktBindingSource;
+                // синхронизируем компоненты bindingSource обоих форм
+                f.produktBindingSource.DataSource = produktBindingSource;
 
-            // чтобы они указывали в таблице на одну и ту же запись
-            f.produktBindingSource.Position = produktBindingSource.Position;
+                // чтобы они указывали в таблице на одну и ту же запись
+                f.produktBindingSource.Position = produktBindingSource.Position;
 
-            //если пользователь в форме добавления нажал на первую кнопку:
-            if (f.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-                //осуществляем выгрузку в DataGridView обновленных данных:
-                produktTableAdapter.Update(this.kafeDataSet.Produkt);
+                //если пользователь в форме добавления нажал на первую кнопку:
+                if (f.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                    //осуществляем выгрузку в DataGridView обновленных данных:
+                    produktTableAdapter.Update(this.kafeDataSet.Produkt);
+            }
+            catch (Exception e1)
+            {
+                System.Windows.Forms.MessageBox.Show(e1.Message);
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            // создаем объект второй формы:
-            dobavlenie_produkta f = new dobavlenie_produkta();
+            try
+            {
+                // создаем объект второй формы:
+                dobavlenie_produkta f = new dobavlenie_produkta();
 
-            // синхронизируем компоненты bindingSource обоих форм:
-            f.produktBindingSource.DataSource = produktBindingSource;
+                // синхронизируем компоненты bindingSource обоих форм:
+                f.produktBindingSource.DataSource = produktBindingSource;
 
-            // чтобы они указывали в таблице на одну и ту же запись:
-            f.produktBindingSource.Position = produktBindingSource.Position;
+                // чтобы они указывали в таблице на одну и ту же запись:
+                f.produktBindingSource.Position = produktBindingSource.Position;
 
-            // если пользователь в форме добавления нажал на первую кнопку:
-            if (f.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-                // осуществляем выгрузку в DataGridView обновленных данных:
-                produktTableAdapter.Update(this.kafeDataSet.Produkt);
+                // если пользователь в форме добавления нажал на первую кнопку:
+                if (f.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                    // осуществляем выгрузку в DataGridView обновленных данных:
+                    produktTableAdapter.Update(this.kafeDataSet.Produkt);
+            }
+            catch (Exception e1)
+            {
+                System.Windows.Forms.MessageBox.Show(e1.Message);
+            }
         }
     }
 }

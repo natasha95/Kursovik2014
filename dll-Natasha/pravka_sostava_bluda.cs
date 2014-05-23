@@ -44,53 +44,60 @@ namespace dll_Natasha
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // вставка строки в таблицу sostav_bluda
-            if (comboBox1.SelectedIndex != -1)
+            try
             {
-
-                string IDprodukta, kolvoProdukta;
-                string produkt;
-                string[] arr = comboBox1.Text.Split(' ');
-                IDprodukta = arr[0];
-                produkt = arr[1];
-                kolvoProdukta = textBox3.Text;
-
-                if (mode == true) // добавление
+                // вставка строки в таблицу sostav_bluda
+                if (comboBox1.SelectedIndex != -1)
                 {
-                    sostavbludaBindingSource.AddNew();
-                    sostavbludaBindingSource.MoveLast();
-                    kafeDataSet.Sostav_bludaRow r = (kafeDataSet.Sostav_bludaRow)((DataRowView)sostavbludaBindingSource.Current).Row;
-                    r.ID_bluda = Convert.ToInt32(label6.Text);
-                    r.ID_produkta = Convert.ToInt32(IDprodukta);
-                    r.Kolvo_produkta = (float)Convert.ToDouble(kolvoProdukta);
-                    sostavbludaBindingSource.EndEdit();
-                    sostav_bludaTableAdapter.Update(kafeDataSet.Sostav_bluda);
-                }
-                else // редактирование
-                {
-                    int ID = Convert.ToInt32(sostav_ID);
-                    sostavbludaBindingSource.MoveFirst();
-                    kafeDataSet.Sostav_bludaRow r = (kafeDataSet.Sostav_bludaRow)((DataRowView)sostavbludaBindingSource.Current).Row;;
-                    int i = 0;
-                    // ищем строку
-                    while (i < sostavbludaBindingSource.List.Count)
+
+                    string IDprodukta, kolvoProdukta;
+                    string produkt;
+                    string[] arr = comboBox1.Text.Split(' ');
+                    IDprodukta = arr[0];
+                    produkt = arr[1];
+                    kolvoProdukta = textBox3.Text;
+
+                    if (mode == true) // добавление
                     {
-                        r = (kafeDataSet.Sostav_bludaRow)((DataRowView)sostavbludaBindingSource.Current).Row;
-                        if (r.ID == ID)
-                        {
-                            break;
-                        }
-                        sostavbludaBindingSource.MoveNext();
-                        i++;
+                        sostavbludaBindingSource.AddNew();
+                        sostavbludaBindingSource.MoveLast();
+                        kafeDataSet.Sostav_bludaRow r = (kafeDataSet.Sostav_bludaRow)((DataRowView)sostavbludaBindingSource.Current).Row;
+                        r.ID_bluda = Convert.ToInt32(label6.Text);
+                        r.ID_produkta = Convert.ToInt32(IDprodukta);
+                        r.Kolvo_produkta = (float)Convert.ToDouble(kolvoProdukta);
+                        sostavbludaBindingSource.EndEdit();
+                        sostav_bludaTableAdapter.Update(kafeDataSet.Sostav_bluda);
                     }
-                   
-                    // вносим изменения
-                    r.ID_bluda = Convert.ToInt32(label6.Text);
-                    r.ID_produkta = Convert.ToInt32(IDprodukta);
-                    r.Kolvo_produkta = (float)Convert.ToDouble(kolvoProdukta);
-                    sostavbludaBindingSource.EndEdit();
-                    sostav_bludaTableAdapter.Update(kafeDataSet.Sostav_bluda);
+                    else // редактирование
+                    {
+                        int ID = Convert.ToInt32(sostav_ID);
+                        sostavbludaBindingSource.MoveFirst();
+                        kafeDataSet.Sostav_bludaRow r = (kafeDataSet.Sostav_bludaRow)((DataRowView)sostavbludaBindingSource.Current).Row; ;
+                        int i = 0;
+                        // ищем строку
+                        while (i < sostavbludaBindingSource.List.Count)
+                        {
+                            r = (kafeDataSet.Sostav_bludaRow)((DataRowView)sostavbludaBindingSource.Current).Row;
+                            if (r.ID == ID)
+                            {
+                                break;
+                            }
+                            sostavbludaBindingSource.MoveNext();
+                            i++;
+                        }
+
+                        // вносим изменения
+                        r.ID_bluda = Convert.ToInt32(label6.Text);
+                        r.ID_produkta = Convert.ToInt32(IDprodukta);
+                        r.Kolvo_produkta = (float)Convert.ToDouble(kolvoProdukta);
+                        sostavbludaBindingSource.EndEdit();
+                        sostav_bludaTableAdapter.Update(kafeDataSet.Sostav_bluda);
+                    }
                 }
+            }
+            catch (Exception e1)
+            {
+                System.Windows.Forms.MessageBox.Show(e1.Message);
             }
         }
 

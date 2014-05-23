@@ -35,6 +35,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDzakazaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bludoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kolvobludaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.formirovaniezakaza1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.kafeDataSet = new dll_Liza.kafeDataSet();
             this.button1 = new System.Windows.Forms.Button();
@@ -48,9 +51,6 @@
             this.zakazTableAdapter = new dll_Liza.kafeDataSetTableAdapters.ZakazTableAdapter();
             this.klientBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.klientTableAdapter = new dll_Liza.kafeDataSetTableAdapters.KlientTableAdapter();
-            this.kolvobludaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bludoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iDzakazaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.formirovaniezakaza1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kafeDataSet)).BeginInit();
@@ -119,6 +119,30 @@
             this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
             this.iDDataGridViewTextBoxColumn.ReadOnly = true;
             this.iDDataGridViewTextBoxColumn.Width = 70;
+            // 
+            // iDzakazaDataGridViewTextBoxColumn
+            // 
+            this.iDzakazaDataGridViewTextBoxColumn.DataPropertyName = "ID_zakaza";
+            this.iDzakazaDataGridViewTextBoxColumn.HeaderText = "ID заказа";
+            this.iDzakazaDataGridViewTextBoxColumn.Name = "iDzakazaDataGridViewTextBoxColumn";
+            this.iDzakazaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDzakazaDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // bludoDataGridViewTextBoxColumn
+            // 
+            this.bludoDataGridViewTextBoxColumn.DataPropertyName = "bludo";
+            this.bludoDataGridViewTextBoxColumn.HeaderText = "Блюдо";
+            this.bludoDataGridViewTextBoxColumn.Name = "bludoDataGridViewTextBoxColumn";
+            this.bludoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.bludoDataGridViewTextBoxColumn.Width = 250;
+            // 
+            // kolvobludaDataGridViewTextBoxColumn
+            // 
+            this.kolvobludaDataGridViewTextBoxColumn.DataPropertyName = "Kolvo_bluda";
+            this.kolvobludaDataGridViewTextBoxColumn.HeaderText = "Кол-во";
+            this.kolvobludaDataGridViewTextBoxColumn.Name = "kolvobludaDataGridViewTextBoxColumn";
+            this.kolvobludaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.kolvobludaDataGridViewTextBoxColumn.Width = 80;
             // 
             // formirovaniezakaza1BindingSource
             // 
@@ -190,6 +214,7 @@
             this.label8.Size = new System.Drawing.Size(49, 13);
             this.label8.TabIndex = 11;
             this.label8.Text = "(скидка)";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // zakazBindingSource
             // 
@@ -208,30 +233,6 @@
             // klientTableAdapter
             // 
             this.klientTableAdapter.ClearBeforeFill = true;
-            // 
-            // kolvobludaDataGridViewTextBoxColumn
-            // 
-            this.kolvobludaDataGridViewTextBoxColumn.DataPropertyName = "Kolvo_bluda";
-            this.kolvobludaDataGridViewTextBoxColumn.HeaderText = "Кол-во";
-            this.kolvobludaDataGridViewTextBoxColumn.Name = "kolvobludaDataGridViewTextBoxColumn";
-            this.kolvobludaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.kolvobludaDataGridViewTextBoxColumn.Width = 80;
-            // 
-            // bludoDataGridViewTextBoxColumn
-            // 
-            this.bludoDataGridViewTextBoxColumn.DataPropertyName = "bludo";
-            this.bludoDataGridViewTextBoxColumn.HeaderText = "Блюдо";
-            this.bludoDataGridViewTextBoxColumn.Name = "bludoDataGridViewTextBoxColumn";
-            this.bludoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.bludoDataGridViewTextBoxColumn.Width = 250;
-            // 
-            // iDzakazaDataGridViewTextBoxColumn
-            // 
-            this.iDzakazaDataGridViewTextBoxColumn.DataPropertyName = "ID_zakaza";
-            this.iDzakazaDataGridViewTextBoxColumn.HeaderText = "ID заказа";
-            this.iDzakazaDataGridViewTextBoxColumn.Name = "iDzakazaDataGridViewTextBoxColumn";
-            this.iDzakazaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.iDzakazaDataGridViewTextBoxColumn.Width = 80;
             // 
             // bluda_zakaza
             // 

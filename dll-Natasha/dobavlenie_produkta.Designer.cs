@@ -33,15 +33,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.produktBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.kafeDataSet = new dll_Natasha.kafeDataSet();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.kafeDataSet = new dll_Natasha.kafeDataSet();
-            this.produktBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.produktTableAdapter = new dll_Natasha.kafeDataSetTableAdapters.ProduktTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.kafeDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.produktBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kafeDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -79,6 +79,16 @@
             this.textBox1.Size = new System.Drawing.Size(185, 20);
             this.textBox1.TabIndex = 3;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // produktBindingSource
+            // 
+            this.produktBindingSource.DataMember = "Produkt";
+            this.produktBindingSource.DataSource = this.kafeDataSet;
+            // 
+            // kafeDataSet
+            // 
+            this.kafeDataSet.DataSetName = "kafeDataSet";
+            this.kafeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // textBox2
             // 
@@ -118,16 +128,6 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // kafeDataSet
-            // 
-            this.kafeDataSet.DataSetName = "kafeDataSet";
-            this.kafeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // produktBindingSource
-            // 
-            this.produktBindingSource.DataMember = "Produkt";
-            this.produktBindingSource.DataSource = this.kafeDataSet;
-            // 
             // produktTableAdapter
             // 
             this.produktTableAdapter.ClearBeforeFill = true;
@@ -154,8 +154,8 @@
             this.Text = "Добавление/редактирование продукта";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.dobavlenie_produkta_FormClosing);
             this.Load += new System.EventHandler(this.dobavlenie_produkta_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.kafeDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.produktBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kafeDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

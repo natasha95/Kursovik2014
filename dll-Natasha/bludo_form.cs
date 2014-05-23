@@ -29,53 +29,74 @@ namespace dll_Natasha
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //создаем объект второй формы
-            dobavlenie_bluda f = new dobavlenie_bluda();
+            try
+            {
+                //создаем объект второй формы
+                dobavlenie_bluda f = new dobavlenie_bluda();
 
-            // добавляем новую запись в таблицу
-            bludoBindingSource.AddNew();
+                // добавляем новую запись в таблицу
+                bludoBindingSource.AddNew();
 
-            // синхронизируем компоненты bindingSource обоих форм
-            f.bludoBindingSource.DataSource = bludoBindingSource;
+                // синхронизируем компоненты bindingSource обоих форм
+                f.bludoBindingSource.DataSource = bludoBindingSource;
 
-            // чтобы они указывали в таблице на одну и ту же запись
-            f.bludoBindingSource.Position = bludoBindingSource.Position;
+                // чтобы они указывали в таблице на одну и ту же запись
+                f.bludoBindingSource.Position = bludoBindingSource.Position;
 
-            // если пользователь в форме добавления нажал на первую кнопку:
-            if (f.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-                // осуществляем выгрузку в DataGridView обновленных данных:
-                bludoTableAdapter.Update(this.kafeDataSet.Bludo);
+                // если пользователь в форме добавления нажал на первую кнопку:
+                if (f.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                    // осуществляем выгрузку в DataGridView обновленных данных:
+                    bludoTableAdapter.Update(this.kafeDataSet.Bludo);
+            }
+            catch (Exception e1)
+            {
+                System.Windows.Forms.MessageBox.Show(e1.Message);
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            // создаем объект второй формы
-            dobavlenie_bluda f = new dobavlenie_bluda();
+            try
+            {
+                // создаем объект второй формы
+                dobavlenie_bluda f = new dobavlenie_bluda();
 
-            // синхронизируем компоненты bindingSource обоих форм
-            f.bludoBindingSource.DataSource = bludoBindingSource;
+                // синхронизируем компоненты bindingSource обоих форм
+                f.bludoBindingSource.DataSource = bludoBindingSource;
 
-            // чтобы они указывали в таблице на одну и ту же запись
-            f.bludoBindingSource.Position = bludoBindingSource.Position;
+                // чтобы они указывали в таблице на одну и ту же запись
+                f.bludoBindingSource.Position = bludoBindingSource.Position;
 
-            // если пользователь в форме добавления нажал на первую кнопку:
-            if (f.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-                // осуществляем выгрузку в DataGridView обновленных данных:
-                bludoTableAdapter.Update(this.kafeDataSet.Bludo);
+                // если пользователь в форме добавления нажал на первую кнопку:
+                if (f.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                    // осуществляем выгрузку в DataGridView обновленных данных:
+                    bludoTableAdapter.Update(this.kafeDataSet.Bludo);
+            }
+            catch (Exception e1)
+            {
+                System.Windows.Forms.MessageBox.Show(e1.Message);
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (System.Windows.Forms.MessageBox.Show("Удалить блюдо со списком ингредиентов?", "Вопрос", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
+            try
             {
-                // пометка на удаление:
-                bludoBindingSource.RemoveCurrent();
+                if (System.Windows.Forms.MessageBox.Show("Удалить блюдо со списком ингредиентов?", "Вопрос", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
+                {
+                    // пометка на удаление:
+                    bludoBindingSource.RemoveCurrent();
 
-                // сохранение изменений:
-                bludoBindingSource.EndEdit();
+                    // сохранение изменений:
+                    bludoBindingSource.EndEdit();
 
-                // выгрузка в DataGridView обновленных данных:
-                bludoTableAdapter.Update(this.kafeDataSet.Bludo);
+                    // выгрузка в DataGridView обновленных данных:
+                    bludoTableAdapter.Update(this.kafeDataSet.Bludo);
+                }
+            }
+            catch (Exception e1)
+            {
+                System.Windows.Forms.MessageBox.Show(e1.Message);
             }
         }
 

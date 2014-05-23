@@ -26,13 +26,20 @@ namespace dll_Liza
 
         private void dobavlenie_klienta_FormClosing(object sender, FormClosingEventArgs e)
         {
-            //если пользователь нажал на первую кнопку:
-            if (DialogResult == System.Windows.Forms.DialogResult.OK)
-                //сохранить изменения:
-                klientBindingSource.EndEdit();
-            else
-                //не сохранять изменения:
-                klientBindingSource.CancelEdit();
+            try
+            {
+                //если пользователь нажал на первую кнопку:
+                if (DialogResult == System.Windows.Forms.DialogResult.OK)
+                    //сохранить изменения:
+                    klientBindingSource.EndEdit();
+                else
+                    //не сохранять изменения:
+                    klientBindingSource.CancelEdit();
+            }
+            catch (Exception e1)
+            {
+                System.Windows.Forms.MessageBox.Show(e1.Message);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)

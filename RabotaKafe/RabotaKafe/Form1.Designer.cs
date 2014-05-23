@@ -38,74 +38,85 @@
             // 
             // klient
             // 
+            this.klient.BackColor = System.Drawing.Color.PowderBlue;
             this.klient.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.klient.ForeColor = System.Drawing.Color.Black;
             this.klient.Location = new System.Drawing.Point(346, 12);
             this.klient.Name = "klient";
             this.klient.Size = new System.Drawing.Size(144, 69);
             this.klient.TabIndex = 0;
             this.klient.Text = "Клиенты";
-            this.klient.UseVisualStyleBackColor = true;
+            this.klient.UseVisualStyleBackColor = false;
             this.klient.Click += new System.EventHandler(this.klient_Click);
             // 
             // produkt
             // 
+            this.produkt.BackColor = System.Drawing.Color.PowderBlue;
             this.produkt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.produkt.ForeColor = System.Drawing.Color.Black;
             this.produkt.Location = new System.Drawing.Point(12, 12);
             this.produkt.Name = "produkt";
             this.produkt.Size = new System.Drawing.Size(144, 69);
             this.produkt.TabIndex = 1;
             this.produkt.Text = "Продукты";
-            this.produkt.UseVisualStyleBackColor = true;
+            this.produkt.UseVisualStyleBackColor = false;
             this.produkt.Click += new System.EventHandler(this.produkt_Click);
             // 
             // menu
             // 
+            this.menu.BackColor = System.Drawing.Color.PowderBlue;
             this.menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.menu.ForeColor = System.Drawing.Color.Black;
             this.menu.Location = new System.Drawing.Point(177, 12);
             this.menu.Name = "menu";
             this.menu.Size = new System.Drawing.Size(144, 69);
             this.menu.TabIndex = 2;
             this.menu.Text = "Меню";
-            this.menu.UseVisualStyleBackColor = true;
+            this.menu.UseVisualStyleBackColor = false;
             this.menu.Click += new System.EventHandler(this.menu_Click);
             // 
             // zakaz
             // 
+            this.zakaz.BackColor = System.Drawing.Color.PowderBlue;
             this.zakaz.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.zakaz.ForeColor = System.Drawing.Color.Black;
             this.zakaz.Location = new System.Drawing.Point(87, 131);
             this.zakaz.Name = "zakaz";
             this.zakaz.Size = new System.Drawing.Size(309, 69);
             this.zakaz.TabIndex = 3;
             this.zakaz.Text = "Работа с заказами";
-            this.zakaz.UseVisualStyleBackColor = true;
+            this.zakaz.UseVisualStyleBackColor = false;
             this.zakaz.Click += new System.EventHandler(this.zakaz_Click);
             // 
             // otchet
             // 
+            this.otchet.BackColor = System.Drawing.Color.PowderBlue;
             this.otchet.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.otchet.Location = new System.Drawing.Point(135, 248);
             this.otchet.Name = "otchet";
             this.otchet.Size = new System.Drawing.Size(94, 69);
             this.otchet.TabIndex = 4;
             this.otchet.Text = "Отчет";
-            this.otchet.UseVisualStyleBackColor = true;
+            this.otchet.UseVisualStyleBackColor = false;
             this.otchet.Click += new System.EventHandler(this.otchet_Click);
             // 
             // pochta
             // 
+            this.pochta.BackColor = System.Drawing.Color.PowderBlue;
             this.pochta.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.pochta.Location = new System.Drawing.Point(257, 248);
             this.pochta.Name = "pochta";
             this.pochta.Size = new System.Drawing.Size(94, 69);
             this.pochta.TabIndex = 5;
             this.pochta.Text = "Почта";
-            this.pochta.UseVisualStyleBackColor = true;
+            this.pochta.UseVisualStyleBackColor = false;
             this.pochta.Click += new System.EventHandler(this.pochta_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(502, 350);
             this.Controls.Add(this.pochta);
             this.Controls.Add(this.otchet);

@@ -35,14 +35,20 @@ namespace dll_Natasha
 
         private void dobavlenie_produkta_FormClosing(object sender, FormClosingEventArgs e)
         {
-            // если пользователь нажал на первую кнопку:
-            if (DialogResult == System.Windows.Forms.DialogResult.OK)
-                // сохранить изменения:
-                produktBindingSource.EndEdit();
-            else
-                // не сохранять изменения:
-                produktBindingSource.CancelEdit();
-
+            try
+            {
+                // если пользователь нажал на первую кнопку:
+                if (DialogResult == System.Windows.Forms.DialogResult.OK)
+                    // сохранить изменения:
+                    produktBindingSource.EndEdit();
+                else
+                    // не сохранять изменения:
+                    produktBindingSource.CancelEdit();
+            }
+            catch (Exception e1)
+            {
+                System.Windows.Forms.MessageBox.Show(e1.Message);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)

@@ -11,3 +11,17 @@ D:\Курсовая работа 2014\программа\dll-Natasha\obj\Debug\d
 D:\Курсовая работа 2014\программа\dll-Natasha\obj\Debug\dll-Natasha.csproj.GenerateResource.Cache
 D:\Курсовая работа 2014\программа\dll-Natasha\obj\Debug\dll-Natasha.dll
 D:\Курсовая работа 2014\программа\dll-Natasha\obj\Debug\dll-Natasha.pdb
+D:\Курсовая работа 2014\программа\dll-Natasha\obj\Debug\dll-Natasha.csprojResolveAssemblyReference.cache
+C:\Users\user\Desktop\Курсовая работа 2014\программа\dll-Natasha\bin\Debug\dll-Natasha.dll.config
+C:\Users\user\Desktop\Курсовая работа 2014\программа\dll-Natasha\bin\Debug\dll-Natasha.dll
+C:\Users\user\Desktop\Курсовая работа 2014\программа\dll-Natasha\bin\Debug\dll-Natasha.pdb
+C:\Users\user\Desktop\Курсовая работа 2014\программа\dll-Natasha\obj\Debug\dll_Natasha.dobavlenie_bluda.resources
+C:\Users\user\Desktop\Курсовая работа 2014\программа\dll-Natasha\obj\Debug\dll_Natasha.dobavlenie_produkta.resources
+C:\Users\user\Desktop\Курсовая работа 2014\программа\dll-Natasha\obj\Debug\dll_Natasha.bludo_form.resources
+C:\Users\user\Desktop\Курсовая работа 2014\программа\dll-Natasha\obj\Debug\dll_Natasha.otchet_form.resources
+C:\Users\user\Desktop\Курсовая работа 2014\программа\dll-Natasha\obj\Debug\dll_Natasha.pravka_sostava_bluda.resources
+C:\Users\user\Desktop\Курсовая работа 2014\программа\dll-Natasha\obj\Debug\dll_Natasha.produkt_form.resources
+C:\Users\user\Desktop\Курсовая работа 2014\программа\dll-Natasha\obj\Debug\dll_Natasha.sostav_bluda.resources
+C:\Users\user\Desktop\Курсовая работа 2014\программа\dll-Natasha\obj\Debug\dll-Natasha.csproj.GenerateResource.Cache
+C:\Users\user\Desktop\Курсовая работа 2014\программа\dll-Natasha\obj\Debug\dll-Natasha.dll
+C:\Users\user\Desktop\Курсовая работа 2014\программа\dll-Natasha\obj\Debug\dll-Natasha.pdb
