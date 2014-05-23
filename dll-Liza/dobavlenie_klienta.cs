@@ -39,5 +39,22 @@ namespace dll_Liza
         {
 
         }
+
+        private void textBox5_Leave(object sender, EventArgs e)
+        {
+            // проверяем корректность почтового адреса
+            if (textBox5.Text.IndexOf("@") < 0)
+            {
+                button1.DialogResult = System.Windows.Forms.DialogResult.None;
+                this.AcceptButton = null;
+                System.Windows.Forms.MessageBox.Show("Неверный адрес почты! Введите адрес в правильном формате");
+            }
+        }
+
+        private void textBox5_Enter(object sender, EventArgs e)
+        {
+            button1.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.AcceptButton = button1;
+        }
     }
 }

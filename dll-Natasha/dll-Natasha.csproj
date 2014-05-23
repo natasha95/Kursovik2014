@@ -76,10 +76,20 @@
     <Compile Include="bludo_form.Designer.cs">
       <DependentUpon>bludo_form.cs</DependentUpon>
     </Compile>
+    <Compile Include="kafeDataSet.cs">
+      <DependentUpon>kafeDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="kafeDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>kafeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="otchet_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="otchet_form.Designer.cs">
+      <DependentUpon>otchet_form.cs</DependentUpon>
     </Compile>
     <Compile Include="pravka_sostava_bluda.cs">
       <SubType>Form</SubType>
@@ -115,6 +125,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="bludo_form.resx">
       <DependentUpon>bludo_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="otchet_form.resx">
+      <DependentUpon>otchet_form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="pravka_sostava_bluda.resx">
       <DependentUpon>pravka_sostava_bluda.cs</DependentUpon>

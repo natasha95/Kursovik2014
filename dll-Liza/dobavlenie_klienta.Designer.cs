@@ -37,15 +37,15 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.klientBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.kafeDataSet = new dll_Liza.kafeDataSet();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
-            this.kafeDataSet = new dll_Liza.kafeDataSet();
-            this.klientBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.klientTableAdapter = new dll_Liza.kafeDataSetTableAdapters.KlientTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.kafeDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.klientBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kafeDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -122,6 +122,16 @@
             this.textBox1.Size = new System.Drawing.Size(265, 20);
             this.textBox1.TabIndex = 7;
             // 
+            // klientBindingSource
+            // 
+            this.klientBindingSource.DataMember = "Klient";
+            this.klientBindingSource.DataSource = this.kafeDataSet;
+            // 
+            // kafeDataSet
+            // 
+            this.kafeDataSet.DataSetName = "kafeDataSet";
+            this.kafeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // textBox2
             // 
             this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.klientBindingSource, "NomerKarty", true));
@@ -153,16 +163,8 @@
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(158, 20);
             this.textBox5.TabIndex = 11;
-            // 
-            // kafeDataSet
-            // 
-            this.kafeDataSet.DataSetName = "kafeDataSet";
-            this.kafeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // klientBindingSource
-            // 
-            this.klientBindingSource.DataMember = "Klient";
-            this.klientBindingSource.DataSource = this.kafeDataSet;
+            this.textBox5.Enter += new System.EventHandler(this.textBox5_Enter);
+            this.textBox5.Leave += new System.EventHandler(this.textBox5_Leave);
             // 
             // klientTableAdapter
             // 
@@ -194,8 +196,8 @@
             this.Text = "Добавление/редактирование клиента";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.dobavlenie_klienta_FormClosing);
             this.Load += new System.EventHandler(this.dobavlenie_klienta_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.kafeDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.klientBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kafeDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -21,6 +21,19 @@ namespace dll_Liza
             InitializeComponent();
         }
 
+        public void Vybrat_klienta_po_fio(string fio)
+        {
+            for (int i = 0; i < comboBox1.Items.Count; i++)
+            {
+                comboBox1.SelectedIndex = i;
+                //string[] arr = comboBox1.Text.Split('-');
+                if (comboBox1.Text.Contains(fio))
+                {
+                    break;
+                }
+            }
+        }
+
         private void dobavlenie_zakaza_Load(object sender, EventArgs e)
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "kafeDataSet.Klient1". При необходимости она может быть перемещена или удалена.
@@ -33,18 +46,23 @@ namespace dll_Liza
             if (mode == false) // режим редактирования
             {
                 // выбираем нужные данные в режиме редактирования
-                for (int i = 0; i < comboBox1.Items.Count; i++)
-                {
-                    comboBox1.SelectedIndex = i;
-                    //string[] arr = comboBox1.Text.Split('-');
-                    if (comboBox1.Text == klient_fio)
-                    {
-                        break;
-                    }
-                }
+                Vybrat_klienta_po_fio(klient_fio);
                 dateTimePicker1.Value = dt;
-            }
 
+                comboBox2.Enabled = false;
+                textBox1.Enabled = false;
+                button3.Enabled = false;
+                button4.Enabled = false;
+            }
+            else
+            {
+                comboBox2.Enabled = true;
+                textBox1.Enabled = true;
+                button3.Enabled = true;
+                button4.Enabled = true;
+                comboBox2.SelectedIndex = 0;
+            }
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -67,6 +85,7 @@ namespace dll_Liza
                     r.ID_klienta = Convert.ToInt32(id);
                     r.Data = dateTimePicker1.Value;
                     r.Summa_zakaza = 0;
+                    r.Status = "в работе"; // статус - не оформлен
                     zakazBindingSource.EndEdit();
                     zakazTableAdapter.Update(kafeDataSet.Zakaz);
                 }
@@ -94,6 +113,91 @@ namespace dll_Liza
                     zakazBindingSource.EndEdit();
                     zakazTableAdapter.Update(kafeDataSet.Zakaz);
                 }
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "") return;
+            if (comboBox2.SelectedIndex == 0)
+            {
+                // поиск по номеру телефона
+                klientBindingSource.Filter = "Telefon='" + textBox1.Text + "'";
+                klientBindingSource.MoveFirst();
+                if (klientBindingSource.List.Count > 0)
+                {
+                    kafeDataSet.KlientRow r = (kafeDataSet.KlientRow)((DataRowView)klientBindingSource.Current).Row;
+                    Vybrat_klienta_po_fio(r.FIO);
+                    System.Windows.Forms.MessageBox.Show("Клиент с номером телефона '" + textBox1.Text + "' найден и выбран!");
+                }
+                else
+                {
+                    System.Windows.Forms.MessageBox.Show("Клиент с номером телефона '" + textBox1.Text + "' не найден!");
+                }
+                klientBindingSource.Filter = string.Empty;
+            }
+            else if (comboBox2.SelectedIndex == 1)
+            {
+                // поиск по ФИО
+                klientBindingSource.Filter = "FIO='" + textBox1.Text + "'";
+                klientBindingSource.MoveFirst();
+                if (klientBindingSource.List.Count > 0)
+                {
+                    kafeDataSet.KlientRow r = (kafeDataSet.KlientRow)((DataRowView)klientBindingSource.Current).Row;
+                    Vybrat_klienta_po_fio(r.FIO);
+                    System.Windows.Forms.MessageBox.Show("Клиент с ФИО '" + textBox1.Text + "' найден и выбран!");
+                }
+                else
+                {
+                    System.Windows.Forms.MessageBox.Show("Клиент с ФИО '" + textBox1.Text + "' не найден!");
+                }
+                klientBindingSource.Filter = string.Empty;
+            }
+            else if (comboBox2.SelectedIndex == 2)
+            {
+                // поиск по номеру карты
+                klientBindingSource.Filter = "NomerKarty='" + textBox1.Text + "'";
+                klientBindingSource.MoveFirst();
+                if (klientBindingSource.List.Count > 0)
+                {
+                    kafeDataSet.KlientRow r = (kafeDataSet.KlientRow)((DataRowView)klientBindingSource.Current).Row;
+                    Vybrat_klienta_po_fio(r.FIO);
+                    System.Windows.Forms.MessageBox.Show("Клиент с номером карты '" + textBox1.Text + "' найден и выбран!");
+                }
+                else
+                {
+                    System.Windows.Forms.MessageBox.Show("Клиент с номером карты '" + textBox1.Text + "' не найден!");
+                }
+                klientBindingSource.Filter = string.Empty;
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            // создаем объект второй формы
+            dobavlenie_klienta f = new dobavlenie_klienta();
+
+            // добавляем новую запись в таблицу
+            klientBindingSource.AddNew();
+
+            // синхронизируем компоненты bindingSource обоих форм
+            f.klientBindingSource.DataSource = klientBindingSource;
+
+            // чтобы они указывали в таблице на одну и ту же запись
+            f.klientBindingSource.Position = klientBindingSource.Position;
+
+            // если пользователь в форме добавления нажал на первую кнопку:
+            if (f.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                f.klientTableAdapter.Update(this.kafeDataSet.Klient);
+                // осуществляем выгрузку в DataGridView обновленных данных:
+                this.klientTableAdapter.Fill(this.kafeDataSet.Klient);
+                klientTableAdapter.Update(this.kafeDataSet.Klient);
+
+                this.klient1TableAdapter.Fill(this.kafeDataSet.Klient1);
+                this.zakazTableAdapter.Fill(this.kafeDataSet.Zakaz);
+
+                comboBox1.SelectedIndex = comboBox1.Items.Count - 1;
             }
         }
     }

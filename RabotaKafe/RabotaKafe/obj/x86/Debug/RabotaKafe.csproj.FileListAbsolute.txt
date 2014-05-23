@@ -1,13 +1,12 @@
-D:\Курсовая работа 2014\программа\RabotaKafe\RabotaKafe\obj\x86\Debug\ResolveAssemblyReference.cache
-D:\Курсовая работа 2014\программа\RabotaKafe\RabotaKafe\obj\x86\Debug\RabotaKafe.Form1.resources
-D:\Курсовая работа 2014\программа\RabotaKafe\RabotaKafe\obj\x86\Debug\RabotaKafe.Properties.Resources.resources
-D:\Курсовая работа 2014\программа\RabotaKafe\RabotaKafe\obj\x86\Debug\GenerateResource.read.1.tlog
-D:\Курсовая работа 2014\программа\RabotaKafe\RabotaKafe\obj\x86\Debug\GenerateResource.write.1.tlog
 D:\Курсовая работа 2014\программа\RabotaKafe\RabotaKafe\bin\Debug\RabotaKafe.exe
 D:\Курсовая работа 2014\программа\RabotaKafe\RabotaKafe\bin\Debug\RabotaKafe.pdb
 D:\Курсовая работа 2014\программа\RabotaKafe\RabotaKafe\bin\Debug\dll-Liza.dll
 D:\Курсовая работа 2014\программа\RabotaKafe\RabotaKafe\bin\Debug\dll-Natasha.dll
 D:\Курсовая работа 2014\программа\RabotaKafe\RabotaKafe\bin\Debug\dll-Liza.pdb
 D:\Курсовая работа 2014\программа\RabotaKafe\RabotaKafe\bin\Debug\dll-Natasha.pdb
+D:\Курсовая работа 2014\программа\RabotaKafe\RabotaKafe\obj\x86\Debug\RabotaKafe.csprojResolveAssemblyReference.cache
+D:\Курсовая работа 2014\программа\RabotaKafe\RabotaKafe\obj\x86\Debug\RabotaKafe.Form1.resources
+D:\Курсовая работа 2014\программа\RabotaKafe\RabotaKafe\obj\x86\Debug\RabotaKafe.Properties.Resources.resources
+D:\Курсовая работа 2014\программа\RabotaKafe\RabotaKafe\obj\x86\Debug\RabotaKafe.csproj.GenerateResource.Cache
 D:\Курсовая работа 2014\программа\RabotaKafe\RabotaKafe\obj\x86\Debug\RabotaKafe.exe
 D:\Курсовая работа 2014\программа\RabotaKafe\RabotaKafe\obj\x86\Debug\RabotaKafe.pdb

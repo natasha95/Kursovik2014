@@ -35,17 +35,27 @@
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iDzakazaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bludoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kolvobludaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.formirovaniezakaza1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.kafeDataSet = new dll_Liza.kafeDataSet();
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.formirovanie_zakaza1TableAdapter = new dll_Liza.kafeDataSetTableAdapters.Formirovanie_zakaza1TableAdapter();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.zakazBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.zakazTableAdapter = new dll_Liza.kafeDataSetTableAdapters.ZakazTableAdapter();
+            this.klientBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.klientTableAdapter = new dll_Liza.kafeDataSetTableAdapters.KlientTableAdapter();
+            this.kolvobludaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bludoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDzakazaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.formirovaniezakaza1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kafeDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zakazBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.klientBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -110,30 +120,6 @@
             this.iDDataGridViewTextBoxColumn.ReadOnly = true;
             this.iDDataGridViewTextBoxColumn.Width = 70;
             // 
-            // iDzakazaDataGridViewTextBoxColumn
-            // 
-            this.iDzakazaDataGridViewTextBoxColumn.DataPropertyName = "ID_zakaza";
-            this.iDzakazaDataGridViewTextBoxColumn.HeaderText = "ID заказа";
-            this.iDzakazaDataGridViewTextBoxColumn.Name = "iDzakazaDataGridViewTextBoxColumn";
-            this.iDzakazaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.iDzakazaDataGridViewTextBoxColumn.Width = 80;
-            // 
-            // bludoDataGridViewTextBoxColumn
-            // 
-            this.bludoDataGridViewTextBoxColumn.DataPropertyName = "bludo";
-            this.bludoDataGridViewTextBoxColumn.HeaderText = "Блюдо";
-            this.bludoDataGridViewTextBoxColumn.Name = "bludoDataGridViewTextBoxColumn";
-            this.bludoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.bludoDataGridViewTextBoxColumn.Width = 250;
-            // 
-            // kolvobludaDataGridViewTextBoxColumn
-            // 
-            this.kolvobludaDataGridViewTextBoxColumn.DataPropertyName = "Kolvo_bluda";
-            this.kolvobludaDataGridViewTextBoxColumn.HeaderText = "Кол-во";
-            this.kolvobludaDataGridViewTextBoxColumn.Name = "kolvobludaDataGridViewTextBoxColumn";
-            this.kolvobludaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.kolvobludaDataGridViewTextBoxColumn.Width = 80;
-            // 
             // formirovaniezakaza1BindingSource
             // 
             this.formirovaniezakaza1BindingSource.DataMember = "Formirovanie_zakaza1";
@@ -169,11 +155,93 @@
             // 
             this.formirovanie_zakaza1TableAdapter.ClearBeforeFill = true;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(316, 304);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(44, 13);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Сумма:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(366, 304);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(46, 13);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "(сумма)";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(453, 304);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(47, 13);
+            this.label7.TabIndex = 10;
+            this.label7.Text = "Скидка:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(506, 304);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(49, 13);
+            this.label8.TabIndex = 11;
+            this.label8.Text = "(скидка)";
+            // 
+            // zakazBindingSource
+            // 
+            this.zakazBindingSource.DataMember = "Zakaz";
+            this.zakazBindingSource.DataSource = this.kafeDataSet;
+            // 
+            // zakazTableAdapter
+            // 
+            this.zakazTableAdapter.ClearBeforeFill = true;
+            // 
+            // klientBindingSource
+            // 
+            this.klientBindingSource.DataMember = "Klient";
+            this.klientBindingSource.DataSource = this.kafeDataSet;
+            // 
+            // klientTableAdapter
+            // 
+            this.klientTableAdapter.ClearBeforeFill = true;
+            // 
+            // kolvobludaDataGridViewTextBoxColumn
+            // 
+            this.kolvobludaDataGridViewTextBoxColumn.DataPropertyName = "Kolvo_bluda";
+            this.kolvobludaDataGridViewTextBoxColumn.HeaderText = "Кол-во";
+            this.kolvobludaDataGridViewTextBoxColumn.Name = "kolvobludaDataGridViewTextBoxColumn";
+            this.kolvobludaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.kolvobludaDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // bludoDataGridViewTextBoxColumn
+            // 
+            this.bludoDataGridViewTextBoxColumn.DataPropertyName = "bludo";
+            this.bludoDataGridViewTextBoxColumn.HeaderText = "Блюдо";
+            this.bludoDataGridViewTextBoxColumn.Name = "bludoDataGridViewTextBoxColumn";
+            this.bludoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.bludoDataGridViewTextBoxColumn.Width = 250;
+            // 
+            // iDzakazaDataGridViewTextBoxColumn
+            // 
+            this.iDzakazaDataGridViewTextBoxColumn.DataPropertyName = "ID_zakaza";
+            this.iDzakazaDataGridViewTextBoxColumn.HeaderText = "ID заказа";
+            this.iDzakazaDataGridViewTextBoxColumn.Name = "iDzakazaDataGridViewTextBoxColumn";
+            this.iDzakazaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDzakazaDataGridViewTextBoxColumn.Width = 80;
+            // 
             // bluda_zakaza
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(582, 330);
+            this.ClientSize = new System.Drawing.Size(582, 334);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
@@ -191,6 +259,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.formirovaniezakaza1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kafeDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zakazBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.klientBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -205,12 +275,20 @@
         private System.Windows.Forms.Button button3;
         private kafeDataSet kafeDataSet;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDzakazaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bludoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn kolvobludaDataGridViewTextBoxColumn;
         public System.Windows.Forms.Label label2;
         public System.Windows.Forms.Label label4;
         public System.Windows.Forms.BindingSource formirovaniezakaza1BindingSource;
         public kafeDataSetTableAdapters.Formirovanie_zakaza1TableAdapter formirovanie_zakaza1TableAdapter;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        public System.Windows.Forms.BindingSource zakazBindingSource;
+        public kafeDataSetTableAdapters.ZakazTableAdapter zakazTableAdapter;
+        public System.Windows.Forms.BindingSource klientBindingSource;
+        public kafeDataSetTableAdapters.KlientTableAdapter klientTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDzakazaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bludoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kolvobludaDataGridViewTextBoxColumn;
     }
 }

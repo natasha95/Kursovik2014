@@ -140,7 +140,7 @@ namespace dll_Liza
                             k = (kolvo_info)kolvo[i];
                             if (r2.ID == k.produktID)
                             {
-                                r.Kolvo -= k.kolvo_treb;
+                                r2.Kolvo -= k.kolvo_treb;
                                 break;
                             }
                         }

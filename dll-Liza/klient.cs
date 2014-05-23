@@ -50,8 +50,10 @@ namespace dll_Liza
 
             // если пользователь в форме добавления нажал на первую кнопку:
             if (f.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
                 // осуществляем выгрузку в DataGridView обновленных данных:
                 klientTableAdapter.Update(this.kafeDataSet.Klient);
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -67,8 +69,10 @@ namespace dll_Liza
 
             // если пользователь в форме добавления нажал на первую кнопку:
             if (f.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
                 // осуществляем выгрузку в DataGridView обновленных данных:
                 klientTableAdapter.Update(this.kafeDataSet.Klient);
+            }
         }
     }
 }

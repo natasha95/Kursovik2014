@@ -89,6 +89,7 @@
             this.otchet.TabIndex = 4;
             this.otchet.Text = "Отчет";
             this.otchet.UseVisualStyleBackColor = true;
+            this.otchet.Click += new System.EventHandler(this.otchet_Click);
             // 
             // pochta
             // 
@@ -99,6 +100,7 @@
             this.pochta.TabIndex = 5;
             this.pochta.Text = "Почта";
             this.pochta.UseVisualStyleBackColor = true;
+            this.pochta.Click += new System.EventHandler(this.pochta_Click);
             // 
             // Form1
             // 

@@ -41,5 +41,17 @@ namespace RabotaKafe
             zakazy zf = new zakazy();
             zf.ShowDialog();
         }
+
+        private void otchet_Click(object sender, EventArgs e)
+        {
+            otchet_form f = new otchet_form();
+            f.ShowDialog();
+        }
+
+        private void pochta_Click(object sender, EventArgs e)
+        {
+            pochta_form f = new pochta_form();
+            f.ShowDialog();
+        }
     }
 }

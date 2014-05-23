@@ -31,9 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.klientfioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.summazakazaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.zakaz1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.kafeDataSet = new dll_Liza.kafeDataSet();
             this.button1 = new System.Windows.Forms.Button();
@@ -41,9 +39,16 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.zakaz1TableAdapter = new dll_Liza.kafeDataSetTableAdapters.Zakaz1TableAdapter();
+            this.button5 = new System.Windows.Forms.Button();
+            this.klientBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.klientTableAdapter = new dll_Liza.kafeDataSetTableAdapters.KlientTableAdapter();
+            this.summazakazaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.klientfioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.zakaz1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kafeDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.klientBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -56,12 +61,13 @@
             this.iDDataGridViewTextBoxColumn,
             this.dataDataGridViewTextBoxColumn,
             this.klientfioDataGridViewTextBoxColumn,
-            this.summazakazaDataGridViewTextBoxColumn});
+            this.summazakazaDataGridViewTextBoxColumn,
+            this.Status});
             this.dataGridView1.DataSource = this.zakaz1BindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(652, 309);
+            this.dataGridView1.Size = new System.Drawing.Size(674, 309);
             this.dataGridView1.TabIndex = 0;
             // 
             // iDDataGridViewTextBoxColumn
@@ -72,27 +78,13 @@
             this.iDDataGridViewTextBoxColumn.ReadOnly = true;
             this.iDDataGridViewTextBoxColumn.Width = 70;
             // 
-            // dataDataGridViewTextBoxColumn
+            // Status
             // 
-            this.dataDataGridViewTextBoxColumn.DataPropertyName = "Data";
-            this.dataDataGridViewTextBoxColumn.HeaderText = "Дата";
-            this.dataDataGridViewTextBoxColumn.Name = "dataDataGridViewTextBoxColumn";
-            this.dataDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // klientfioDataGridViewTextBoxColumn
-            // 
-            this.klientfioDataGridViewTextBoxColumn.DataPropertyName = "klient_fio";
-            this.klientfioDataGridViewTextBoxColumn.HeaderText = "Клиент";
-            this.klientfioDataGridViewTextBoxColumn.Name = "klientfioDataGridViewTextBoxColumn";
-            this.klientfioDataGridViewTextBoxColumn.ReadOnly = true;
-            this.klientfioDataGridViewTextBoxColumn.Width = 250;
-            // 
-            // summazakazaDataGridViewTextBoxColumn
-            // 
-            this.summazakazaDataGridViewTextBoxColumn.DataPropertyName = "Summa_zakaza";
-            this.summazakazaDataGridViewTextBoxColumn.HeaderText = "Сумма заказа";
-            this.summazakazaDataGridViewTextBoxColumn.Name = "summazakazaDataGridViewTextBoxColumn";
-            this.summazakazaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.Status.DataPropertyName = "Status";
+            this.Status.HeaderText = "Статус";
+            this.Status.Name = "Status";
+            this.Status.ReadOnly = true;
+            this.Status.Width = 80;
             // 
             // zakaz1BindingSource
             // 
@@ -126,11 +118,11 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(499, 328);
+            this.button3.Location = new System.Drawing.Point(594, 327);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(126, 23);
+            this.button3.Size = new System.Drawing.Size(72, 23);
             this.button3.TabIndex = 3;
-            this.button3.Text = "Удалить заказ";
+            this.button3.Text = "Удалить";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -138,7 +130,7 @@
             // 
             this.button4.Location = new System.Drawing.Point(304, 328);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(189, 23);
+            this.button4.Size = new System.Drawing.Size(170, 23);
             this.button4.TabIndex = 4;
             this.button4.Text = "Редактировать список блюд";
             this.button4.UseVisualStyleBackColor = true;
@@ -148,11 +140,53 @@
             // 
             this.zakaz1TableAdapter.ClearBeforeFill = true;
             // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(480, 327);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(108, 23);
+            this.button5.TabIndex = 5;
+            this.button5.Text = "Закрыть заказ";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // klientBindingSource
+            // 
+            this.klientBindingSource.DataMember = "Klient";
+            this.klientBindingSource.DataSource = this.kafeDataSet;
+            // 
+            // klientTableAdapter
+            // 
+            this.klientTableAdapter.ClearBeforeFill = true;
+            // 
+            // summazakazaDataGridViewTextBoxColumn
+            // 
+            this.summazakazaDataGridViewTextBoxColumn.DataPropertyName = "Summa_zakaza";
+            this.summazakazaDataGridViewTextBoxColumn.HeaderText = "Сумма заказа";
+            this.summazakazaDataGridViewTextBoxColumn.Name = "summazakazaDataGridViewTextBoxColumn";
+            this.summazakazaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // klientfioDataGridViewTextBoxColumn
+            // 
+            this.klientfioDataGridViewTextBoxColumn.DataPropertyName = "klient_fio";
+            this.klientfioDataGridViewTextBoxColumn.HeaderText = "Клиент";
+            this.klientfioDataGridViewTextBoxColumn.Name = "klientfioDataGridViewTextBoxColumn";
+            this.klientfioDataGridViewTextBoxColumn.ReadOnly = true;
+            this.klientfioDataGridViewTextBoxColumn.Width = 250;
+            // 
+            // dataDataGridViewTextBoxColumn
+            // 
+            this.dataDataGridViewTextBoxColumn.DataPropertyName = "Data";
+            this.dataDataGridViewTextBoxColumn.HeaderText = "Дата";
+            this.dataDataGridViewTextBoxColumn.Name = "dataDataGridViewTextBoxColumn";
+            this.dataDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // zakazy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(676, 361);
+            this.ClientSize = new System.Drawing.Size(722, 361);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -168,6 +202,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.zakaz1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kafeDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.klientBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -180,11 +215,15 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private kafeDataSet kafeDataSet;
+        public System.Windows.Forms.BindingSource zakaz1BindingSource;
+        public kafeDataSetTableAdapters.Zakaz1TableAdapter zakaz1TableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
+        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn klientfioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn summazakazaDataGridViewTextBoxColumn;
-        public System.Windows.Forms.BindingSource zakaz1BindingSource;
-        public kafeDataSetTableAdapters.Zakaz1TableAdapter zakaz1TableAdapter;
+        public System.Windows.Forms.BindingSource klientBindingSource;
+        public kafeDataSetTableAdapters.KlientTableAdapter klientTableAdapter;
     }
 }

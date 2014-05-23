@@ -1,14 +1,13 @@
 D:\Курсовая работа 2014\программа\dll-Natasha\bin\Debug\dll-Natasha.dll.config
 D:\Курсовая работа 2014\программа\dll-Natasha\bin\Debug\dll-Natasha.dll
 D:\Курсовая работа 2014\программа\dll-Natasha\bin\Debug\dll-Natasha.pdb
-D:\Курсовая работа 2014\программа\dll-Natasha\obj\Debug\ResolveAssemblyReference.cache
 D:\Курсовая работа 2014\программа\dll-Natasha\obj\Debug\dll_Natasha.dobavlenie_bluda.resources
 D:\Курсовая работа 2014\программа\dll-Natasha\obj\Debug\dll_Natasha.dobavlenie_produkta.resources
 D:\Курсовая работа 2014\программа\dll-Natasha\obj\Debug\dll_Natasha.bludo_form.resources
+D:\Курсовая работа 2014\программа\dll-Natasha\obj\Debug\dll_Natasha.otchet_form.resources
 D:\Курсовая работа 2014\программа\dll-Natasha\obj\Debug\dll_Natasha.pravka_sostava_bluda.resources
 D:\Курсовая работа 2014\программа\dll-Natasha\obj\Debug\dll_Natasha.produkt_form.resources
 D:\Курсовая работа 2014\программа\dll-Natasha\obj\Debug\dll_Natasha.sostav_bluda.resources
-D:\Курсовая работа 2014\программа\dll-Natasha\obj\Debug\GenerateResource.read.1.tlog
-D:\Курсовая работа 2014\программа\dll-Natasha\obj\Debug\GenerateResource.write.1.tlog
+D:\Курсовая работа 2014\программа\dll-Natasha\obj\Debug\dll-Natasha.csproj.GenerateResource.Cache
 D:\Курсовая работа 2014\программа\dll-Natasha\obj\Debug\dll-Natasha.dll
 D:\Курсовая работа 2014\программа\dll-Natasha\obj\Debug\dll-Natasha.pdb
