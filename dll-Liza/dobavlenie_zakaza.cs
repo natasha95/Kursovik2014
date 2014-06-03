@@ -34,7 +34,7 @@ namespace dll_Liza
             }
         }
 
-        private void dobavlenie_zakaza_Load(object sender, EventArgs e)
+        public void dobavlenie_zakaza_Load(object sender, EventArgs e)
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "kafeDataSet.Klient1". При необходимости она может быть перемещена или удалена.
             this.klient1TableAdapter.Fill(this.kafeDataSet.Klient1);
@@ -50,14 +50,14 @@ namespace dll_Liza
                 dateTimePicker1.Value = dt;
 
                 comboBox2.Enabled = false;
-                textBox1.Enabled = false;
+                comboBox3.Enabled = false;
                 button3.Enabled = false;
                 button4.Enabled = false;
             }
             else
             {
                 comboBox2.Enabled = true;
-                textBox1.Enabled = true;
+                comboBox3.Enabled = true;
                 button3.Enabled = true;
                 button4.Enabled = true;
                 comboBox2.SelectedIndex = 0;
@@ -65,7 +65,7 @@ namespace dll_Liza
             
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        public void button1_Click(object sender, EventArgs e)
         {
             try
             {
@@ -127,55 +127,55 @@ namespace dll_Liza
             {
 
 
-                if (textBox1.Text == "") return;
+                if (comboBox3.Text == "") return;
                 if (comboBox2.SelectedIndex == 0)
                 {
                     // поиск по номеру телефона
-                    klientBindingSource.Filter = "Telefon='" + textBox1.Text + "'";
+                    klientBindingSource.Filter = "Telefon='" + comboBox3.Text + "'";
                     klientBindingSource.MoveFirst();
                     if (klientBindingSource.List.Count > 0)
                     {
                         kafeDataSet.KlientRow r = (kafeDataSet.KlientRow)((DataRowView)klientBindingSource.Current).Row;
                         Vybrat_klienta_po_fio(r.FIO);
-                        System.Windows.Forms.MessageBox.Show("Клиент с номером телефона '" + textBox1.Text + "' найден и выбран!");
+                        System.Windows.Forms.MessageBox.Show("Клиент с номером телефона '" + comboBox3.Text + "' найден и выбран!");
                     }
                     else
                     {
-                        System.Windows.Forms.MessageBox.Show("Клиент с номером телефона '" + textBox1.Text + "' не найден!");
+                        System.Windows.Forms.MessageBox.Show("Клиент с номером телефона '" + comboBox3.Text + "' не найден!");
                     }
                     klientBindingSource.Filter = string.Empty;
                 }
                 else if (comboBox2.SelectedIndex == 1)
                 {
                     // поиск по ФИО
-                    klientBindingSource.Filter = "FIO='" + textBox1.Text + "'";
+                    klientBindingSource.Filter = "FIO='" + comboBox3.Text + "'";
                     klientBindingSource.MoveFirst();
                     if (klientBindingSource.List.Count > 0)
                     {
                         kafeDataSet.KlientRow r = (kafeDataSet.KlientRow)((DataRowView)klientBindingSource.Current).Row;
                         Vybrat_klienta_po_fio(r.FIO);
-                        System.Windows.Forms.MessageBox.Show("Клиент с ФИО '" + textBox1.Text + "' найден и выбран!");
+                        System.Windows.Forms.MessageBox.Show("Клиент с ФИО '" + comboBox3.Text + "' найден и выбран!");
                     }
                     else
                     {
-                        System.Windows.Forms.MessageBox.Show("Клиент с ФИО '" + textBox1.Text + "' не найден!");
+                        System.Windows.Forms.MessageBox.Show("Клиент с ФИО '" + comboBox3.Text + "' не найден!");
                     }
                     klientBindingSource.Filter = string.Empty;
                 }
                 else if (comboBox2.SelectedIndex == 2)
                 {
                     // поиск по номеру карты
-                    klientBindingSource.Filter = "NomerKarty='" + textBox1.Text + "'";
+                    klientBindingSource.Filter = "NomerKarty='" + comboBox3.Text + "'";
                     klientBindingSource.MoveFirst();
                     if (klientBindingSource.List.Count > 0)
                     {
                         kafeDataSet.KlientRow r = (kafeDataSet.KlientRow)((DataRowView)klientBindingSource.Current).Row;
                         Vybrat_klienta_po_fio(r.FIO);
-                        System.Windows.Forms.MessageBox.Show("Клиент с номером карты '" + textBox1.Text + "' найден и выбран!");
+                        System.Windows.Forms.MessageBox.Show("Клиент с номером карты '" + comboBox3.Text + "' найден и выбран!");
                     }
                     else
                     {
-                        System.Windows.Forms.MessageBox.Show("Клиент с номером карты '" + textBox1.Text + "' не найден!");
+                        System.Windows.Forms.MessageBox.Show("Клиент с номером карты '" + comboBox3.Text + "' не найден!");
                     }
                     klientBindingSource.Filter = string.Empty;
                 }

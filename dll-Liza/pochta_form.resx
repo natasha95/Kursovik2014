@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="textBox1.Text" xml:space="preserve">
+    <value>Примечания. 1) Будет сформирован файл со списком предлагаемых блюд и отправлен всем клиентам по указанным в базе почтовым адресам.                            2) Если вы отредактировали блюда, необходимо заново сформировать файл предложения.</value>
+  </data>
   <metadata name="kafeDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>

@@ -7,12 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using Excel = Microsoft.Office.Interop.Excel;
+using System.IO;
 
 namespace dll_Natasha
 {
     public partial class otchet_form : Form
     {
         public DateTime dt1, dt2;
+        public Excel.Application excelapp = null;
 
         public otchet_form()
         {
@@ -42,13 +44,18 @@ namespace dll_Natasha
                 dataGridView1.Visible = true;
 
                 // выгрузка отчета в excel
-                Excel.Application excelapp = new Excel.Application();
+                if (excelapp != null)
+                {
+                    excelapp.Quit();
+                    excelapp = null;
+                }
+                excelapp = new Excel.Application();
                 excelapp.SheetsInNewWorkbook = 1;
                 excelapp.Workbooks.Add(Type.Missing);
-                excelapp.DisplayAlerts = true;
+                excelapp.DisplayAlerts = false;
                 Excel.Workbooks excelappworkbooks = excelapp.Workbooks;
                 Excel.Workbook excelappworkbook = excelappworkbooks[1];
-                excelappworkbook.Saved = false;
+                excelappworkbook.Saved = true;
                 Excel.Sheets excelsheets = excelappworkbook.Worksheets;
                 Excel.Worksheet excelworksheet = (Excel.Worksheet)excelsheets.get_Item(1);
                 excelworksheet.Name = "Данные";
@@ -142,13 +149,18 @@ namespace dll_Natasha
                 dataGridView1.Visible = false;
 
                 // выгрузка отчета в excel
-                Excel.Application excelapp = new Excel.Application();
+                if (excelapp != null)
+                {
+                    excelapp.Quit();
+                    excelapp = null;
+                }
+                excelapp = new Excel.Application();
                 excelapp.SheetsInNewWorkbook = 1;
                 excelapp.Workbooks.Add(Type.Missing);
-                excelapp.DisplayAlerts = true;
+                excelapp.DisplayAlerts = false;
                 Excel.Workbooks excelappworkbooks = excelapp.Workbooks;
                 Excel.Workbook excelappworkbook = excelappworkbooks[1];
-                excelappworkbook.Saved = false;
+                excelappworkbook.Saved = true;
                 Excel.Sheets excelsheets = excelappworkbook.Worksheets;
                 Excel.Worksheet excelworksheet = (Excel.Worksheet)excelsheets.get_Item(1);
                 excelworksheet.Name = "Данные";
@@ -259,7 +271,32 @@ namespace dll_Natasha
                     //seriesCollection.Item(m + 1).XValues = "qwe";
                     seriesCollection.Item(m + 1).HasDataLabels = true;
                 }
+                // копируем изображение диаграммы в файл
+                string sfile = Application.StartupPath + @"\e.bmp";
+                if (File.Exists(sfile)) {
+                    File.Delete(sfile);
+                }
+                excelapp.ActiveChart.Export(sfile);
+
+                // вставляем картинку диаграммы на форму
+                otchet_diagramma f = new otchet_diagramma();
+                f.pictureBox1.Load(sfile);
+                f.ShowDialog();
                 excelapp.Visible = true;
+            }
+            catch (Exception e1)
+            {
+                System.Windows.Forms.MessageBox.Show(e1.Message);
+            }
+        }
+
+        private void otchet_form_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            try
+            {
+                if (excelapp != null) {
+                    excelapp.Quit();
+                }
             }
             catch (Exception e1)
             {

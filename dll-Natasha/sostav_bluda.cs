@@ -80,5 +80,24 @@ namespace dll_Natasha
             }
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // пометка на удаление:
+                sostavbluda1BindingSource.RemoveCurrent();
+
+                // сохранение изменений:
+                sostavbluda1BindingSource.EndEdit();
+
+                // выгрузка в DataGridView обновленных данных:
+                sostav_bluda1TableAdapter.Update(this.kafeDataSet.Sostav_bluda1);
+            }
+            catch (Exception e1)
+            {
+                System.Windows.Forms.MessageBox.Show(e1.Message);
+            }
+        }
+
     }
 }

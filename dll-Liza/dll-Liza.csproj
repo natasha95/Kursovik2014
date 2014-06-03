@@ -154,6 +154,12 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\dll-Natasha\dll-Natasha.csproj">
+      <Project>{66A131E1-95AF-4B69-A894-077CFFB8BBA8}</Project>
+      <Name>dll-Natasha</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

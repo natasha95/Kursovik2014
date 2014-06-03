@@ -78,7 +78,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(185, 20);
             this.textBox1.TabIndex = 3;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+           
             // 
             // produktBindingSource
             // 
@@ -126,7 +126,7 @@
             this.button2.TabIndex = 7;
             this.button2.Text = "Отмена";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            
             // 
             // produktTableAdapter
             // 

@@ -13,6 +13,8 @@ using iTextSharp.text;
 using iTextSharp;
 using iTextSharp.text.pdf;
 using System.IO;
+using dll_Natasha;
+
 
 namespace dll_Liza
 {
@@ -53,9 +55,9 @@ namespace dll_Liza
                 client.Send(mail);
                 mail.Dispose();
             }
-            catch (Exception e)
+            catch (Exception e1)
             {
-                throw new Exception("Mail.Send: " + e.Message);
+                System.Windows.Forms.MessageBox.Show("Ошибка отправки почты: " + e1.Message);
             }
         }
 
@@ -105,16 +107,36 @@ namespace dll_Liza
                 }
                 doc.Close();
 
+                button2.Enabled = true;
+                button4.Enabled = true;
+                System.Windows.Forms.MessageBox.Show("Предложение было сформировано", "Информация", MessageBoxButtons.OK);
+            }
+            catch (Exception e1)
+            {
+                System.Windows.Forms.MessageBox.Show(e1.Message);
+            }
+        }
+
+        private void button4_Click(object sender, System.EventArgs e)
+        {
+            try
+            {
+                string docPath = Application.StartupPath + @"\Предложение.pdf";
+                if (!File.Exists(docPath))
+                {
+                    System.Windows.Forms.MessageBox.Show("Не найден файл с предложением", "Ошибка", MessageBoxButtons.OK);
+                    return;
+                }
+
                 // посылаем письмо с информацией о блюдах на почтовые ящики клиентов
                 klientBindingSource.MoveFirst();
                 kafeDataSet.KlientRow r2 = (kafeDataSet.KlientRow)((DataRowView)klientBindingSource.Current).Row;
-                i = 0;
+                int i = 0;
                 while (i < klientBindingSource.List.Count)
                 {
                     r2 = (kafeDataSet.KlientRow)((DataRowView)klientBindingSource.Current).Row;
                     SendMail("smtp.mail.ru", "nasimna@mail.ru", "yfnfif", r2.Email,
-                        "Перечень блюд", "Предлагаем вашему вниманию перечень блюд",
-                        Application.StartupPath + @"\Предложение.pdf");
+                        "Перечень блюд", "Предлагаем вашему вниманию перечень блюд", docPath);
                     klientBindingSource.MoveNext();
                     i++;
                 }
@@ -124,6 +146,33 @@ namespace dll_Liza
             {
                 System.Windows.Forms.MessageBox.Show(e1.Message);
             }
+        }
+
+        private void button2_Click(object sender, System.EventArgs e)
+        {
+            try
+            {
+                string docPath = Application.StartupPath + @"\Предложение.pdf";
+                if (!File.Exists(docPath))
+                {
+                    System.Windows.Forms.MessageBox.Show("Не найден файл с предложением", "Ошибка", MessageBoxButtons.OK);
+                    return;
+                }
+
+                System.Diagnostics.Process proc = new System.Diagnostics.Process();
+                proc.StartInfo.FileName = docPath;
+                proc.Start();//запуск
+            }
+            catch (Exception e1)
+            {
+                System.Windows.Forms.MessageBox.Show(e1.Message);
+            }
+        }
+
+        private void button3_Click(object sender, System.EventArgs e)
+        {
+            bludo_form mf = new bludo_form();
+            mf.ShowDialog();
         }
     }
 }

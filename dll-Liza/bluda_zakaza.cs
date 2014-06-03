@@ -107,11 +107,11 @@ namespace dll_Liza
                 }
                 else if (summaPokupok > 2000)
                 {
-                    skidka = Convert.ToInt32(Math.Ceiling(summaZakaza * 0.02));
+                    skidka = Convert.ToInt32(Math.Ceiling(summaZakaza * 0.05));
                 }
                 else if (summaPokupok > 1000)
                 {
-                    skidka = Convert.ToInt32(Math.Ceiling(summaZakaza * 0.01));
+                    skidka = Convert.ToInt32(Math.Ceiling(summaZakaza * 0.02));
                 }
 
                 return skidka;
@@ -155,11 +155,6 @@ namespace dll_Liza
 
             // выгрузка в DataGridView обновленных данных:
             formirovanie_zakaza1TableAdapter.Update(this.kafeDataSet.Formirovanie_zakaza1); 
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(pochta_form));
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -37,6 +38,9 @@
             this.bludoTableAdapter = new dll_Liza.kafeDataSetTableAdapters.BludoTableAdapter();
             this.klientBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.klientTableAdapter = new dll_Liza.kafeDataSetTableAdapters.KlientTableAdapter();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.kafeDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bludoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.klientBindingSource)).BeginInit();
@@ -46,9 +50,9 @@
             // 
             this.button1.Location = new System.Drawing.Point(12, 12);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(386, 23);
+            this.button1.Size = new System.Drawing.Size(211, 23);
             this.button1.TabIndex = 0;
-            this.button1.Text = "Сформировать и отправить предложение всем клиентам";
+            this.button1.Text = "Сформировать предложение";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -62,14 +66,13 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 41);
+            this.textBox1.Location = new System.Drawing.Point(12, 70);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(386, 51);
+            this.textBox1.Size = new System.Drawing.Size(442, 73);
             this.textBox1.TabIndex = 2;
-            this.textBox1.Text = "Примечание: будет сформирован текст со списком предлагаемых блюд и отправлен всем" +
-                " клиентам по указанным в базе почтовым адресам";
+            this.textBox1.Text = resources.GetString("textBox1.Text");
             // 
             // kafeDataSet
             // 
@@ -94,12 +97,47 @@
             // 
             this.klientTableAdapter.ClearBeforeFill = true;
             // 
+            // button2
+            // 
+            this.button2.Enabled = false;
+            this.button2.Location = new System.Drawing.Point(12, 41);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(211, 23);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Просмотр файла предложений";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(243, 12);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(211, 23);
+            this.button3.TabIndex = 4;
+            this.button3.Text = "Редактирование блюд";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.Enabled = false;
+            this.button4.Location = new System.Drawing.Point(243, 41);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(211, 23);
+            this.button4.TabIndex = 5;
+            this.button4.Text = "Послать файл предложений";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // pochta_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PaleGoldenrod;
-            this.ClientSize = new System.Drawing.Size(412, 104);
+            this.ClientSize = new System.Drawing.Size(466, 156);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
@@ -128,5 +166,8 @@
         public kafeDataSetTableAdapters.BludoTableAdapter bludoTableAdapter;
         public System.Windows.Forms.BindingSource klientBindingSource;
         public kafeDataSetTableAdapters.KlientTableAdapter klientTableAdapter;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
     }
 }

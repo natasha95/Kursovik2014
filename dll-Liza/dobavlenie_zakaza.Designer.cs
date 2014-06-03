@@ -43,12 +43,12 @@
             this.zakazTableAdapter = new dll_Liza.kafeDataSetTableAdapters.ZakazTableAdapter();
             this.klient1TableAdapter = new dll_Liza.kafeDataSetTableAdapters.Klient1TableAdapter();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.klientBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kafeDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.klient1BindingSource)).BeginInit();
@@ -148,7 +148,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.comboBox3);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.comboBox2);
             this.groupBox1.Controls.Add(this.label3);
@@ -159,14 +159,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Поиск клиента";
             // 
-            // label3
+            // label4
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(17, 27);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 13);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Искать по:";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(17, 66);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(47, 13);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Искать:";
             // 
             // comboBox2
             // 
@@ -181,21 +181,14 @@
             this.comboBox2.Size = new System.Drawing.Size(221, 21);
             this.comboBox2.TabIndex = 1;
             // 
-            // label4
+            // label3
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(17, 66);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(47, 13);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Искать:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(85, 63);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(221, 20);
-            this.textBox1.TabIndex = 3;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(17, 27);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(62, 13);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Искать по:";
             // 
             // button3
             // 
@@ -216,6 +209,14 @@
             this.button4.Text = "Поиск";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(85, 63);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(221, 21);
+            this.comboBox3.TabIndex = 4;
             // 
             // dobavlenie_zakaza
             // 
@@ -257,11 +258,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private kafeDataSet kafeDataSet;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label3;
@@ -273,5 +272,7 @@
         public kafeDataSetTableAdapters.ZakazTableAdapter zakazTableAdapter;
         public System.Windows.Forms.BindingSource klient1BindingSource;
         public kafeDataSetTableAdapters.Klient1TableAdapter klient1TableAdapter;
+        public System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox comboBox3;
     }
 }

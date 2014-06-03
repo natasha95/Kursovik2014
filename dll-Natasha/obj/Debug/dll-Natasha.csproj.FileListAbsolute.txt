@@ -11,7 +11,6 @@ D:\Курсовая работа 2014\программа\dll-Natasha\obj\Debug\d
 D:\Курсовая работа 2014\программа\dll-Natasha\obj\Debug\dll-Natasha.csproj.GenerateResource.Cache
 D:\Курсовая работа 2014\программа\dll-Natasha\obj\Debug\dll-Natasha.dll
 D:\Курсовая работа 2014\программа\dll-Natasha\obj\Debug\dll-Natasha.pdb
-D:\Курсовая работа 2014\программа\dll-Natasha\obj\Debug\dll-Natasha.csprojResolveAssemblyReference.cache
 C:\Users\user\Desktop\Курсовая работа 2014\программа\dll-Natasha\bin\Debug\dll-Natasha.dll.config
 C:\Users\user\Desktop\Курсовая работа 2014\программа\dll-Natasha\bin\Debug\dll-Natasha.dll
 C:\Users\user\Desktop\Курсовая работа 2014\программа\dll-Natasha\bin\Debug\dll-Natasha.pdb
@@ -25,3 +24,7 @@ C:\Users\user\Desktop\Курсовая работа 2014\программа\dll-
 C:\Users\user\Desktop\Курсовая работа 2014\программа\dll-Natasha\obj\Debug\dll-Natasha.csproj.GenerateResource.Cache
 C:\Users\user\Desktop\Курсовая работа 2014\программа\dll-Natasha\obj\Debug\dll-Natasha.dll
 C:\Users\user\Desktop\Курсовая работа 2014\программа\dll-Natasha\obj\Debug\dll-Natasha.pdb
+D:\Курсовая работа 2014\программа\dll-Natasha\obj\Debug\dll_Natasha.otchet_diagramma.resources
+D:\Курсовая работа 2014\программа\dll-Natasha\obj\Debug\dll_Natasha.Properties.Resources.resources
+C:\Users\user\Desktop\Курсовая работа 2014\программа\dll-Natasha\obj\Debug\dll_Natasha.otchet_diagramma.resources
+C:\Users\user\Desktop\Курсовая работа 2014\программа\dll-Natasha\obj\Debug\dll_Natasha.Properties.Resources.resources

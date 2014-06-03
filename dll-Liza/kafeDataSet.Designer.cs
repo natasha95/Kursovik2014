@@ -1305,6 +1305,8 @@ namespace dll_Liza {
             
             private global::System.Data.DataColumn columnEmail;
             
+            private global::System.Data.DataColumn columnSkidka;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public KlientDataTable() {
@@ -1388,6 +1390,14 @@ namespace dll_Liza {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn SkidkaColumn {
+                get {
+                    return this.columnSkidka;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1423,7 +1433,7 @@ namespace dll_Liza {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public KlientRow AddKlientRow(string NomerKarty, int SummaPokupok, string FIO, string Telefon, string Email) {
+            public KlientRow AddKlientRow(string NomerKarty, int SummaPokupok, string FIO, string Telefon, string Email, string Skidka) {
                 KlientRow rowKlientRow = ((KlientRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -1431,7 +1441,8 @@ namespace dll_Liza {
                         SummaPokupok,
                         FIO,
                         Telefon,
-                        Email};
+                        Email,
+                        Skidka};
                 rowKlientRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowKlientRow);
                 return rowKlientRow;
@@ -1467,6 +1478,7 @@ namespace dll_Liza {
                 this.columnFIO = base.Columns["FIO"];
                 this.columnTelefon = base.Columns["Telefon"];
                 this.columnEmail = base.Columns["Email"];
+                this.columnSkidka = base.Columns["Skidka"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1484,6 +1496,8 @@ namespace dll_Liza {
                 base.Columns.Add(this.columnTelefon);
                 this.columnEmail = new global::System.Data.DataColumn("Email", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnEmail);
+                this.columnSkidka = new global::System.Data.DataColumn("Skidka", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSkidka);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID}, true));
                 this.columnID.AutoIncrement = true;
@@ -4086,6 +4100,22 @@ namespace dll_Liza {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Skidka {
+                get {
+                    try {
+                        return ((string)(this[this.tableKlient.SkidkaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Skidka\' в таблице \'Klient\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableKlient.SkidkaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsNomerKartyNull() {
                 return this.IsNull(this.tableKlient.NomerKartyColumn);
             }
@@ -4118,6 +4148,18 @@ namespace dll_Liza {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetEmailNull() {
                 this[this.tableKlient.EmailColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsSkidkaNull() {
+                return this.IsNull(this.tableKlient.SkidkaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetSkidkaNull() {
+                this[this.tableKlient.SkidkaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

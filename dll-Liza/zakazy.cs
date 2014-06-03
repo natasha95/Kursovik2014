@@ -12,12 +12,14 @@ namespace dll_Liza
 {
     public partial class zakazy : Form
     {
+        public bool otkr_bluda = false;
+
         public zakazy()
         {
             InitializeComponent();
         }
 
-        private void zakazy_Load(object sender, EventArgs e)
+        public void zakazy_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'kafeDataSet.Bludo1' table. You can move, or remove it, as needed.
             this.bludo1TableAdapter.Fill(this.kafeDataSet.Bludo1);
@@ -28,6 +30,11 @@ namespace dll_Liza
             // TODO: данная строка кода позволяет загрузить данные в таблицу "kafeDataSet.Zakaz1". При необходимости она может быть перемещена или удалена.
             this.zakaz1TableAdapter.Fill(this.kafeDataSet.Zakaz1);
 
+            if (otkr_bluda)
+            {
+                zakaz1BindingSource.MoveLast();
+                button4_Click(sender, e);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -106,7 +113,7 @@ namespace dll_Liza
             }
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        public void button4_Click(object sender, EventArgs e)
         {
             try
             {

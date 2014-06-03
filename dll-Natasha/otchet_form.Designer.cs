@@ -80,6 +80,7 @@
             this.klient1DataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.zakaz1BindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(15, 73);
+            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(583, 211);
@@ -207,6 +208,7 @@
             this.expr1DataGridViewTextBoxColumn});
             this.dataGridView2.DataSource = this.bludo1BindingSource;
             this.dataGridView2.Location = new System.Drawing.Point(12, 73);
+            this.dataGridView2.MultiSelect = false;
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.Size = new System.Drawing.Size(586, 211);
@@ -270,7 +272,8 @@
             this.MinimizeBox = false;
             this.Name = "otchet_form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Отчет по заказам";
+            this.Text = "Отчеты";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.otchet_form_FormClosing);
             this.Load += new System.EventHandler(this.otchet_form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.zakaz1BindingSource)).EndInit();
